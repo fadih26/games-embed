@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation';
 import { getGameConfig, isValidGameId } from '@/app/config/gamesConfig';
 import GameEmbed from '@/app/components/GameEmbed';
 
+// Configure Edge Runtime for Cloudflare deployment
+export const runtime = 'edge';
+
 /**
  * Generate metadata for the game page
  * This improves SEO and provides proper page titles
