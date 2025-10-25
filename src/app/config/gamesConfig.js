@@ -5,7 +5,6 @@
  */
 
 export const gamesConfig = {
-  // Example games - replace with your actual game mappings
   'matching-game-1': {
     url: 'https://wordwall.net/embed/4170af7a0b134f80ba77aa6260dd48f2?themeId=3&templateId=5&fontStackId=0',
     title: 'Matching Game 1',
@@ -13,21 +12,13 @@ export const gamesConfig = {
     width: 500,
     height: 380,
   },
-  'quiz-game-1': {
-    url: 'https://wordwall.net/embed/your-quiz-game-id?themeId=1&templateId=3&fontStackId=0',
-    title: 'Quiz Game 1',
-    description: 'Test your knowledge with this quiz',
+  'matching-game-test': {
+    url: 'https://wordwall.net/ar/embed/d4ad152cc47f4e76a949581e6718e0b3?themeId=65&templateId=25&fontStackId=0',
+    title: 'Matching Game Test',
+    description: 'Arabic matching game',
     width: 500,
     height: 380,
   },
-  'word-search': {
-    url: 'https://wordwall.net/embed/your-word-search-id?themeId=2&templateId=4&fontStackId=0',
-    title: 'Word Search',
-    description: 'Find the hidden words',
-    width: 600,
-    height: 450,
-  },
-  // Add more games here
 };
 
 /**
