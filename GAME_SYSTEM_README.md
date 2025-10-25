@@ -156,22 +156,15 @@ All game IDs are validated server-side before rendering, preventing injection at
 
 ## Performance Optimization
 
-### Static Site Generation (SSG)
+### Server-Side Rendering (SSR)
 
-The dynamic route version includes `generateStaticParams` to pre-render known games at build time:
-
-```javascript
-export async function generateStaticParams() {
-  const gameIds = getAvailableGameIds();
-  // Pre-render all games for all languages
-  return gameIds.map(gameId => ({ gameId }));
-}
-```
+The game pages use Next.js 15's server-side rendering for optimal performance:
 
 **Benefits:**
-- Instant page loads
-- Better SEO
-- Reduced server load
+- Fast initial page loads
+- SEO friendly
+- Dynamic content generation
+- Works with Edge Runtime when needed
 
 ### Loading Strategy
 

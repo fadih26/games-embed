@@ -2,9 +2,6 @@ import { notFound } from 'next/navigation';
 import { getGameConfig, isValidGameId } from '@/app/config/gamesConfig';
 import GameEmbed from '@/app/components/GameEmbed';
 
-// Configure Edge Runtime for Cloudflare deployment
-export const runtime = 'edge';
-
 /**
  * Generate metadata for the game page
  * This improves SEO and provides proper page titles
@@ -103,28 +100,4 @@ export default async function GamePage({ params, searchParams }) {
       </div>
     </div>
   );
-}
-
-/**
- * Generate static params for known games (optional)
- * This pre-renders pages at build time for better performance
- */
-export async function generateStaticParams() {
-  const { getAvailableGameIds } = await import('@/app/config/gamesConfig');
-  const gameIds = getAvailableGameIds();
-
-  // Generate params for both supported languages
-  const params = [];
-  const languages = ['en', 'ar'];
-
-  languages.forEach(lang => {
-    gameIds.forEach(gameId => {
-      params.push({
-        lang,
-        gameId,
-      });
-    });
-  });
-
-  return params;
 }
